@@ -159,6 +159,10 @@ TARGET_RECOVERY_FSTAB := device/samsung/ancora/rootdir/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
+# Charger
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/ancora/sepolicy
