@@ -286,13 +286,16 @@ service setup_fs /system/bin/setup_fs /dev/block/mmcblk0p15
     group root
     oneshot
 
-on property:crypto.driver.load=1
-    insmod /system/lib/modules/qce.ko
-    insmod /system/lib/modules/qcedev.ko
+service orientationd /system/bin/orientationd
+    class main
+    user compass
+    group input
+    disabled
 
-on property:crypto.driver.load=0
-    exec /system/bin/rmmod qcedev.ko
-    exec /system/bin/rmmod qce.ko
+service geomagneticd /system/bin/geomagneticd
+    class main
+    user compass
+    group system input
 
 on property:init.svc.ril-daemon=running
     start get_macaddrs
