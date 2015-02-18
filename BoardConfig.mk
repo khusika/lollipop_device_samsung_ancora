@@ -56,7 +56,6 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
-<<<<<<< HEAD
 # Legacy MMAP for pre-lollipop blobs
 BOARD_USES_LEGACY_MMAP := true
 
@@ -67,7 +66,6 @@ TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30-common
 TARGET_KERNEL_CONFIG := ancora_defconfig
 
 # Wifi related defines
-BOARD_HAVE_SAMSUNG_WIFI          := true
 WIFI_BAND                        := 802_11_ABG
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
