@@ -1,8 +1,12 @@
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common MOKEE stuff.
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/full_ancora.mk)
+
+# boot animation
+PRODUCT_COPY_FILES += \
+    vendor/mk/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
 
 # This device is hdpi
 PRODUCT_AAPT_CONFIG := normal hdpi
@@ -11,7 +15,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_RELEASE_NAME := ancora
 
 # Setup device configuration
-PRODUCT_NAME := cm_ancora
+PRODUCT_NAME := mk_ancora
 PRODUCT_DEVICE := ancora
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
