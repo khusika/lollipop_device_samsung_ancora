@@ -159,6 +159,23 @@ TARGET_RECOVERY_FSTAB := device/samsung/ancora/rootdir/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
+
+# TWRP recovery
+DEVICE_RESOLUTION := 480x800
+TW_TARGET_USES_QCOM_BSP := true
+TW_SCREEN_BLANK_ON_BOOT := true
+TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.196609/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_CUSTOM_POWER_BUTTON := 107
+BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_10x18.h\"
+RECOVERY_SDCARD_ON_DATA := true
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_INCLUDE_FB2PNG := true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/ancora/sepolicy
