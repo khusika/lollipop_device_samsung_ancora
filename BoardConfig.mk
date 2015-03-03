@@ -56,6 +56,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# Low-ram optimizations
+PAC_LOW_RAM_DEVICE := true
+
 # Legacy MMAP for pre-lollipop blobs
 BOARD_USES_LEGACY_MMAP := true
 
