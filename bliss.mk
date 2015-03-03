@@ -1,5 +1,5 @@
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Bliss stuff.
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/full_ancora.mk)
@@ -8,10 +8,14 @@ $(call inherit-product, $(LOCAL_PATH)/full_ancora.mk)
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+# boot animation
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
+
 PRODUCT_RELEASE_NAME := ancora
 
 # Setup device configuration
-PRODUCT_NAME := cm_ancora
+PRODUCT_NAME := bliss_ancora
 PRODUCT_DEVICE := ancora
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
