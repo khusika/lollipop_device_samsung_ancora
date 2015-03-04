@@ -11,8 +11,7 @@ $(call inherit-product, vendor/aicp/configs/gsm.mk)
 PRODUCT_PACKAGE_OVERLAYS += device/samsung/ancora/overlay
 
 # boot animation
-PRODUCT_COPY_FILES += \
-    vendor/aicp/prebuilt/bootanimation/bootanimation_480_854.zip:system/media/bootanimation.zip
+-include vendor/aicp/configs/bootanimation.mk
 
 # This device is hdpi
 PRODUCT_AAPT_CONFIG := normal hdpi
