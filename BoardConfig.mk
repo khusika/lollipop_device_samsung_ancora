@@ -144,7 +144,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5767168
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 7864320
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1163919360
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 1832910848
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 1832894464
 BOARD_CACHEIMAGE_PARTITION_SIZE := 560988160
 BOARD_FLASH_BLOCK_SIZE := 131072
 
@@ -162,7 +162,6 @@ TARGET_RECOVERY_FSTAB := device/samsung/ancora/rootdir/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
-
 # TWRP recovery
 DEVICE_RESOLUTION := 480x800
 TW_TARGET_USES_QCOM_BSP := true
@@ -179,6 +178,11 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_INCLUDE_FB2PNG := true
 
+# Charger
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/ancora/sepolicy
@@ -193,14 +197,12 @@ BOARD_SEPOLICY_UNION += \
     dhcp.te \
     domain.te \
     file.te \
-    geomagneticd.te \
     healthd.te \
     init.te \
     kernel.te \
     mac_update.te \
     mediaserver.te \
     netd.te \
-    orientationd.te \
     platform_app.te \
     property.te \
     rild.te \
