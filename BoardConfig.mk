@@ -59,6 +59,9 @@ endif
 # Legacy MMAP for pre-lollipop blobs
 BOARD_USES_LEGACY_MMAP := true
 
+# LIQUIFY OPTIMIZATIONS
+LIQUIFY=true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00400000
 BOARD_KERNEL_PAGESIZE := 2048
