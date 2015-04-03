@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit some common OmniRom stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(LOCAL_PATH)/ancora.mk)
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_ancora
+PRODUCT_NAME := omni_ancora
 PRODUCT_DEVICE := ancora
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
